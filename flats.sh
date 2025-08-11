@@ -1,4 +1,10 @@
+#!/bin/bash
+set -euo pipefail
+
+echo "Adding Flathub repository..."
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+
+echo "Installing Flatpak applications..."
 flatpak install flathub io.github.josephmawa.Bella -y
 flatpak install flathub me.iepure.devtoolbox -y
 flatpak install flathub it.fabiodistasio.AntaresSQL -y
@@ -18,4 +24,6 @@ flatpak install flathub net.codelogistics.webapps -y
 flatpak install flathub com.usebruno.Bruno -y
 flatpak install flathub io.github.zingytomato.netpeek -y
 flatpak install flathub ro.go.hmlendea.DL-Desktop -y
-flatpak install flathub net.devolutions.RDM
+flatpak install flathub net.devolutions.RDM -y
+
+echo "Flatpak applications installation completed!"
