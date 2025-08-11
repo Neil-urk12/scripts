@@ -1,6 +1,9 @@
 #!/bin/bash
 set -euo pipefail
 
+echo "Installing podman"
+sudo dnf -y install podman
+
 echo "Installing LazyGit..."
 sudo dnf copr enable dejan/lazygit
 sudo dnf install lazygit -y
