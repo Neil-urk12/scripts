@@ -3,7 +3,7 @@ set -euo pipefail
 
 echo "Installing podman"
 sudo dnf -y install podman
-
+sudo dnf -y install zoxide
 echo "Installing LazyGit..."
 sudo dnf copr enable dejan/lazygit
 sudo dnf install lazygit -y
@@ -32,5 +32,10 @@ if [ ! -d "~/.config/nvim" ]; then
 else
     echo "Neovim config directory already exists, skipping..."
 fi
+
+echo "Installing zellij"
+
+sudo dnf copr enable varlad/zellij 
+sudo dnf install zellij -y
 
 echo "Essential applications installation completed!"
