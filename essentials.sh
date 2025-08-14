@@ -24,6 +24,8 @@ wget "https://repo.protonvpn.com/fedora-$(cat /etc/fedora-release | cut -d' ' -f
 echo "Installing ProtonVPN..."
 sudo dnf install ./protonvpn-stable-release-1.0.3-1.noarch.rpm && sudo dnf check-update --refresh 
 sudo dnf install proton-vpn-gnome-desktop -y
+sudo dnf install neovim -y
+sudo dnf install sqlitebrowser -y
 
 echo "Setting up LazyVim configuration..."
 if [ ! -d "~/.config/nvim" ]; then
