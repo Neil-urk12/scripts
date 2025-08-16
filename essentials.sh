@@ -27,6 +27,9 @@ sudo dnf install proton-vpn-gnome-desktop -y
 sudo dnf install neovim -y
 sudo dnf install sqlitebrowser -y
 
+sudo dnf enable lihaohong/yazi
+sudo dnf install yazi --setopt=install_weak_deps=False
+
 echo "Setting up LazyVim configuration..."
 if [ ! -d "~/.config/nvim" ]; then
     git clone https://github.com/LazyVim/starter ~/.config/nvim
