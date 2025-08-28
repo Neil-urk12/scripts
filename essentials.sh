@@ -22,7 +22,7 @@ echo "Downloading ProtonVPN package..."
 wget "https://repo.protonvpn.com/fedora-$(cat /etc/fedora-release | cut -d' ' -f 3)-stable/protonvpn-stable-release/protonvpn-stable-release-1.0.3-1.noarch.rpm"
 
 echo "Installing ProtonVPN..."
-sudo dnf install ./protonvpn-stable-release-1.0.3-1.noarch.rpm && sudo dnf check-update --refresh 
+sudo dnf install ./protonvpn-stable-release-1.0.3-1.noarch.rpm && sudo dnf check-update --refresh
 sudo dnf install proton-vpn-gnome-desktop -y
 sudo dnf install neovim -y
 sudo dnf install sqlitebrowser -y
@@ -40,7 +40,9 @@ fi
 
 echo "Installing zellij"
 
-sudo dnf copr enable varlad/zellij 
+sudo dnf copr enable varlad/zellij
 sudo dnf install zellij -y
+
+curl -f https://zed.dev/install.sh | sh
 
 echo "Essential applications installation completed!"
