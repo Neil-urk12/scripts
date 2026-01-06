@@ -42,3 +42,7 @@ echo "Dotnet-sdk-10 installed"
 echo "Installing dotnet 9 sdk"
 sudo dnf install dotnet-sdk-9.0
 echo "Dotnet 9 sdk installed"
+
+echo "Installing dotnet 8 sdk"
+sudo dnf install dotnet-sdk-8.0
+echo "Dotnet 8 installed"
